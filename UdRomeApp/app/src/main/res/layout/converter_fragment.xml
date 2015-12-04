@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.udcs.udromeapp.currency.ConverterFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/currency_page_title"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_from"
+        android:id="@+id/currency1"
+        android:layout_alignTop="@+id/currency2"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_to"
+        android:id="@+id/currency2"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/num_currency_from"
+        android:layout_below="@+id/currency1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/num_currency_to"
+        android:layout_alignBottom="@+id/num_currency_from"
+        android:layout_toRightOf="@+id/num_currency_from"
+        android:layout_toEndOf="@+id/num_currency_from" />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_currency_from"
+        android:layout_below="@+id/num_currency_from"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swap_currencies"
+        android:id="@+id/swap_button"
+        android:layout_below="@+id/spinner_currency_from"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/swap_currencies"/>
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_currency_to"
+        android:layout_below="@+id/num_currency_to"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all"
+        android:id="@+id/view_all_button"
+        android:layout_below="@+id/swap_button"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refresh_data"
+        android:id="@+id/refresh_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/you_are_here"
+        android:id="@+id/you_are_here_view"
+        android:layout_below="@+id/view_all_button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/here_currency"
+        android:id="@+id/here_currency_view"
+        android:layout_below="@+id/you_are_here_view"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_updated_string"
+        android:id="@+id/last_updated_string"
+        android:layout_above="@+id/last_updated_view"
+        android:layout_alignLeft="@+id/you_are_here_view"
+        android:layout_alignStart="@+id/you_are_here_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/last_updated_format"
+        android:id="@+id/last_updated_view"
+        android:layout_above="@+id/refresh_button"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+</RelativeLayout>
